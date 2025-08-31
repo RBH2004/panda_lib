@@ -36,3 +36,14 @@ print(var3)
 #1  2
 #2  3
 #3  4
+
+list1=[[1,2,3,4],[5,6,7,8]]
+x=pd.DataFrame(list1)
+print(x)
+
+#   0  1  2  3
+#0  1  2  3  4
+#1  5  6  7  8
+
+dic1={'s':pd.Series([1,2,3,4]),'d':pd.Series([4,5,6,7])}
+print(pd.DataFrame(dic1))
