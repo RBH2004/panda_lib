@@ -5,3 +5,6 @@ arr=pd.DataFrame(d)
 print(arr)
 
 arr.to_csv("testing.csv")
+print(arr)
+arr.to_csv("testing.csv",index=False,header=[1,2])
+print(arr)
