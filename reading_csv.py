@@ -142,3 +142,61 @@ print(name_heading)
 #                                                                                      0                     17.54         1711        48.0        1.3         5.54         0.0        54.84                    2
 #
 #[89561 rows x 1 columns]
+
+
+deleted_header=pd.read_csv("D:\\github\\panda\\nyc_taxis.csv",header=None)
+deleted_header=deleted_header.add_prefix("col")
+print(deleted_header)
+
+
+#              col0          col1        col2              col3  ...         col11       col12         col13         col14
+#0      pickup_year  pickup_month  pickup_day  pickup_dayofweek  ...  tolls_amount  tip_amount  total_amount  payment_type
+#1             2016             1           1                 5  ...          5.54       11.65         69.99             
+#1
+#2             2016             1           1                 5  ...          0.00        8.00         54.30             
+#1
+#3             2016             1           1                 5  ...          0.00        0.00         37.80             
+#2
+#4             2016             1           1                 5  ...          0.00        5.46         32.76             
+#1
+#...            ...           ...         ...               ...  ...           ...         ...           ...           ...
+#89556         2016             6          30                 4  ...          5.54         3.0         40.84             
+#1
+#89557         2016             6          30                 4  ...          5.54         0.0         58.34             
+#1
+#89558         2016             6          30                 4  ...          5.54         5.0         63.34             
+#1
+#89559         2016             6          30                 4  ...           0.0        8.95         44.75             
+#1
+#89560         2016             6          30                 4  ...          5.54         0.0         54.84             
+#2
+#
+#[89561 rows x 15 columns]
+
+data_type=pd.read_csv("D:\\github\\panda\\nyc_taxis.csv",dtype={'pickup_year':float})
+print(data_type)
+
+#       pickup_year  pickup_month  pickup_day  pickup_dayofweek  ...  tolls_amount  tip_amount  total_amount  payment_type
+#0           2016.0             1           1                 5  ...          5.54       11.65         69.99             
+#1
+#1           2016.0             1           1                 5  ...          0.00        8.00         54.30             
+#1
+#2           2016.0             1           1                 5  ...          0.00        0.00         37.80             
+#2
+#3           2016.0             1           1                 5  ...          0.00        5.46         32.76             
+#1
+#4           2016.0             1           1                 5  ...          0.00        0.00         18.80             
+#2
+#...            ...           ...         ...               ...  ...           ...         ...           ...           ...
+#89555       2016.0             6          30                 4  ...          5.54        3.00         40.84             
+#1
+#89556       2016.0             6          30                 4  ...          5.54        0.00         58.34             
+#1
+#89557       2016.0             6          30                 4  ...          5.54        5.00         63.34             
+#1
+#89558       2016.0             6          30                 4  ...          0.00        8.95         44.75             
+#1
+#89559       2016.0             6          30                 4  ...          5.54        0.00         54.84             
+#2
+#
+#[89560 rows x 15 columns]
