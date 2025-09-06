@@ -41,3 +41,22 @@ print(data.head())
 #4         2016             1           1  ...        0.00         18.80             2
 #
 #[5 rows x 15 columns]
+
+
+print(data.head(2))
+
+#   pickup_year  pickup_month  pickup_day  ...  tip_amount  total_amount  payment_type
+#0         2016             1           1  ...       11.65         69.99             1
+#1         2016             1           1  ...        8.00         54.30             1
+#
+#[2 rows x 15 columns]
+
+
+print(data.tail(2))
+
+
+#       pickup_year  pickup_month  pickup_day  ...  tip_amount  total_amount  payment_type
+#89558         2016             6          30  ...        8.95         44.75             1
+#89559         2016             6          30  ...        0.00         54.84             2
+#
+#[2 rows x 15 columns]
