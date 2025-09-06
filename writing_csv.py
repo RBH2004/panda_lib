@@ -3,3 +3,41 @@ import pandas as pd
 
 data=pd.read_csv("D:\\github\\panda\\nyc_taxis.csv")
 
+print(data.index)
+
+#RangeIndex(start=0, stop=89560, step=1)
+
+print(data.columns)
+
+#Index(['pickup_year', 'pickup_month', 'pickup_day', 'pickup_dayofweek',
+#       'pickup_time', 'pickup_location_code', 'dropoff_location_code',
+#       'trip_distance', 'trip_length', 'fare_amount', 'fees_amount',
+#       'tolls_amount', 'tip_amount', 'total_amount', 'payment_type'],
+#      dtype='object')
+
+print(data.describe())
+
+
+#       pickup_year  pickup_month    pickup_day  ...    tip_amount  total_amount  payment_type
+#count      89560.0  89560.000000  89560.000000  ...  89560.000000  89560.000000  89560.000000     
+#mean        2016.0      3.614471     15.693535  ...      5.814489     48.966662      1.290442     
+#std            0.0      1.692354      8.694046  ...      4.832459     16.429253      0.476341     
+#min         2016.0      1.000000      1.000000  ...      0.000000    -58.340000      1.000000     
+#25%         2016.0      2.000000      8.000000  ...      0.000000     38.840000      1.000000     
+#50%         2016.0      4.000000     16.000000  ...      6.470000     48.340000      1.000000     
+#75%         2016.0      5.000000     23.000000  ...      9.460000     60.800000      2.000000     
+#max         2016.0      6.000000     31.000000  ...    100.000000    834.840000      4.000000     
+#
+#[8 rows x 15 columns]
+
+print(data.head())
+
+
+#   pickup_year  pickup_month  pickup_day  ...  tip_amount  total_amount  payment_type
+#0         2016             1           1  ...       11.65         69.99             1
+#1         2016             1           1  ...        8.00         54.30             1
+#2         2016             1           1  ...        0.00         37.80             2
+#3         2016             1           1  ...        5.46         32.76             1
+#4         2016             1           1  ...        0.00         18.80             2
+#
+#[5 rows x 15 columns]
