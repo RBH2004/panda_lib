@@ -148,3 +148,30 @@ print(data)
 #89559         2016             6          30  ...        0.00         54.84             2
 #
 #[89560 rows x 15 columns]
+
+
+print(data.loc[[2,3],['pickup_year','pickup_month']])
+
+#   pickup_year  pickup_month
+#2         2016             1
+#3         2016             1
+
+data=data.drop('pickup_year',axis=1)
+
+print(data)
+
+
+#       pickup_month  pickup_day  pickup_dayofweek  ...  tip_amount  total_amount  payment_type
+#0                 1           1                 5  ...       11.65         69.99             1    
+#1                 1           1                 5  ...        8.00         54.30             1    
+#2                 1           1                 5  ...        0.00         37.80             2    
+#3                 1           1                 5  ...        5.46         32.76             1    
+#4                 1           1                 5  ...        0.00         18.80             2    
+#...             ...         ...               ...  ...         ...           ...           ...    
+#89555             6          30                 4  ...        3.00         40.84             1    
+#89556             6          30                 4  ...        0.00         58.34             1    
+#89557             6          30                 4  ...        5.00         63.34             1    
+#89558             6          30                 4  ...        8.95         44.75             1    
+#89559             6          30                 4  ...        0.00         54.84             2    
+#
+#[89560 rows x 14 columns]
