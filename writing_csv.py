@@ -95,7 +95,6 @@ print(data.index.array)
 # 89550, 89551, 89552, 89553, 89554, 89555, 89556, 89557, 89558, 89559]
 #Length: 89560, dtype: int64
 
-
 print(data.to_numpy())
 
 #<PandasArray>
