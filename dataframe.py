@@ -48,3 +48,10 @@ print(x)
 dic1={'s':pd.Series([1,2,3,4]),'d':pd.Series([4,5,6,7])}
 print(pd.DataFrame(dic1))
 
+
+#   s  d
+#0  1  4
+#1  2  5
+#2  3  6
+#3  4  7
+
