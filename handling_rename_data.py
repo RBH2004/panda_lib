@@ -65,3 +65,5 @@ print(data3)
 #
 #[89560 rows x 13 columns]
 #
+
+data4=data.dropna(any='how') # removes the row with all the Nan values 
