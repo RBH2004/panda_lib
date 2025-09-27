@@ -47,7 +47,7 @@ print(data2)
 #[89559 rows x 15 columns]
 
 
-data3=data.dropna(axis=1) #removes columns with Nan data. similarly axis=0 removes rows with Nan data
+data3=data.dropna(axis=1) #removes column with Nan data. similarly axis=0 removes rows with Nan data
 print(data3)
 #
 #       pickup_day  pickup_dayofweek  pickup_time  ...  tip_amount  total_amount  payment_type
