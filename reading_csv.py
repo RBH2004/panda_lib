@@ -139,6 +139,7 @@ deleted_header=pd.read_csv("D:\\github\\panda\\nyc_taxis.csv",header=None)
 deleted_header=deleted_header.add_prefix("col")
 print(deleted_header)
 
+
 #              col0          col1        col2              col3  ...         col11       col12         col13         col14
 #0      pickup_year  pickup_month  pickup_day  pickup_dayofweek  ...  tolls_amount  tip_amount  total_amount  payment_type
 #1             2016             1           1                 5  ...          5.54       11.65         69.99             
