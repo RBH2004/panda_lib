@@ -51,3 +51,58 @@ print(data)
 #c  3  13  23  33
 #d  4  14  24  34
 
+
+arr1=pd.DataFrame({'A':[1,2,3,4],"B":[11,12,13,14]},index=['a','b','c','d'])
+arr2=pd.DataFrame({"C":[21,22],"D":[31,32]},index=['a','b'])
+
+data=arr1.join(arr2)
+print(data)
+
+#   A   B     C     D
+#a  1  11  21.0  31.0
+#b  2  12  22.0  32.0
+#d  4  14   NaN   NaN
+#c  3  13   NaN   NaN
+
+
+arr1=pd.DataFrame({'A':[1,2,3,4],"B":[11,12,13,14]},index=['a','b','c','d'])
+arr2=pd.DataFrame({"C":[21,22],"D":[31,32]},index=['a','b'])
+
+data=arr1.join(arr2,how='inner')
+print(data)
+
+#   A   B   C   D
+#a  1  11  21  31
+#b  2  12  22  32
+
+
+arr1=pd.DataFrame({'A':[1,2,3,4],"B":[11,12,13,14]},index=['a','b','c','d'])
+arr2=pd.DataFrame({"C":[21,22],"D":[31,32]},index=['a','b'])
+
+data=arr1.join(arr2,how="left")
+print(data)
+
+#   A   B     C     D
+#a  1  11  21.0  31.0
+#b  2  12  22.0  32.0
+#c  3  13   NaN   NaN
+#d  4  14   NaN   NaN
+
+
+arr1=pd.DataFrame({'A':[1,2,3,4],"B":[11,12,13,14]},index=['a','b','c','d'])
+arr2=pd.DataFrame({"C":[21,22],"D":[31,32]},index=['a','b'])
+
+data=arr1.join(arr2,how="right")
+print(data)
+#
+#   A   B   C   D
+#a  1  11  21  31
+#b  2  12  22  32
+
+
+
+arr1=pd.DataFrame({'A':[1,2,3,4],"B":[11,12,13,14]},index=['a','b','c','d'])
+arr2=pd.DataFrame({"C":[21,22],"D":[31,32]},index=['a','b'])
+
+data=arr1.join(arr2,how="right")
+print(data)
