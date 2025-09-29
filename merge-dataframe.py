@@ -69,3 +69,12 @@ print(data)
 #2    3   13    3   23
 #3    4   14    5   24
 #
+
+data=pd.merge(arr1,arr2,left_index=True,right_index=True,suffixes=['_name','_id'])
+print(data)
+#   A_name  B_name  A_id  B_id
+#0       1      11     1    21
+#1       2      12     2    22
+#2       3      13     3    23
+#3       4      14     5    24
+
