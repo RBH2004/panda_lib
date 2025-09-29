@@ -94,3 +94,39 @@ print(var.pivot(index='days',columns='st_name'))
 #4        15.0   NaN   NaN  13.0   NaN   NaN
 #5         NaN  16.0   NaN   NaN  14.0   NaN
 #6         NaN   NaN  12.0   NaN   NaN  16.0
+
+
+print(var.pivot(index='days',columns='st_name',values='eng'))
+
+#st_name     a     b     c
+#days
+#1        10.0   NaN   NaN
+#2         NaN  12.0   NaN
+#3         NaN   NaN  14.0
+#4        15.0   NaN   NaN
+#5         NaN  16.0   NaN
+#6         NaN   NaN  12.0
+
+var = pd.DataFrame({
+    "days": [1, 2, 3, 4, 5, 6],
+    "st_name": ["a", "b", "c", "a", "b", "c"],
+    "eng": [10, 12, 14, 15, 16, 12],
+    "maths": [17, 18, 19, 13, 14, 16]
+})
+
+print(var.pivot_table(index='st_name',columns='days',aggfunc='mean'))
+
+#          eng                               maths
+#days        1     2     3     4     5     6     1     2     3     4     5     6
+#st_name
+#a        10.0   NaN   NaN  15.0   NaN   NaN  17.0   NaN   NaN  13.0   NaN   NaN
+#b         NaN  12.0   NaN   NaN  16.0   NaN   NaN  18.0   NaN   NaN  14.0   NaN
+#c         NaN   NaN  14.0   NaN   NaN  12.0   NaN   NaN  19.0   NaN   NaN  16.0
+print(var.pivot_table(index='st_name',columns='days',aggfunc='mean',margins=True))
+#          eng                                          maths
+#days        1     2     3     4     5     6        All     1     2     3     4     5     6        All   
+#st_name
+#a        10.0   NaN   NaN  15.0   NaN   NaN  12.500000  17.0   NaN   NaN  13.0   NaN   NaN  15.000000   
+#b         NaN  12.0   NaN   NaN  16.0   NaN  14.000000   NaN  18.0   NaN   NaN  14.0   NaN  16.000000   
+#c         NaN   NaN  14.0   NaN   NaN  12.0  13.000000   NaN   NaN  19.0   NaN   NaN  16.0  17.500000   
+#All      10.0  12.0  14.0  15.0  16.0  12.0  13.166667  17.0  18.0  19.0  13.0  14.0  16.0  16.166667   
