@@ -95,3 +95,40 @@ print(data4)
 #89559        2016             6          30  ...        0.00         54.84             2
 #
 #[89560 rows x 15 columns]
+
+data5=data.replace(8.00,method='ffill',limit=2)
+print(data5)
+#
+#      pickup_year  pickup_month  pickup_day  ...  tip_amount  total_amount  payment_type
+#0           Rafid             1           1  ...       11.65         69.99             1
+#1            efaz             1           1  ...       11.65         54.30             1
+#2           nafiz             1           1  ...        0.00         37.80             2
+#3           Fahim             1           1  ...        5.46         32.76             1
+#4            Tofa             1           1  ...        0.00         18.80             2
+#...           ...           ...         ...  ...         ...           ...           ...
+#89555        2016             6          30  ...        3.00         40.84             1
+#89556        2016             6          30  ...        0.00         58.34             1
+#89557        2016             6          30  ...        5.00         63.34             1
+#89558        2016             6          30  ...        8.95         44.75             1
+#89559        2016             6          30  ...        0.00         54.84             2
+#
+#[89560 rows x 15 columns]
+
+
+data.replace(8.00,method='ffill',limit=2,inplace=True)
+print(data)
+
+#      pickup_year  pickup_month  pickup_day  ...  tip_amount  total_amount  payment_type
+#0           Rafid             1           1  ...       11.65         69.99             1
+#1            efaz             1           1  ...       11.65         54.30             1
+#2           nafiz             1           1  ...        0.00         37.80             2
+#3           Fahim             1           1  ...        5.46         32.76             1
+#4            Tofa             1           1  ...        0.00         18.80             2
+#...           ...           ...         ...  ...         ...           ...           ...
+#89555        2016             6          30  ...        3.00         40.84             1
+#89556        2016             6          30  ...        0.00         58.34             1
+#89557        2016             6          30  ...        5.00         63.34             1
+#89558        2016             6          30  ...        8.95         44.75             1
+#89559        2016             6          30  ...        0.00         54.84             2
+#
+#[89560 rows x 15 columns]
