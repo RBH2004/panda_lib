@@ -47,9 +47,26 @@ print(x)
 #6    a   15   29
 #8    a   25   25
 
-print(new_data.min())
+print(new_data.min()) #similarly max(), mean() can be used
 #name
 #a      12   23
 #b      13   24
 #c      10   25
 #d      12   26
+
+a_list=list(new_data)
+print(a_list)
+
+#[('a',   name  s-1  s_2
+#0    a   12   23
+#4    a   13   28
+#6    a   15   29
+#8    a   25   25), ('b',   name  s-1  s_2
+#1    b   13   24
+#5    b   14   28
+#7    b   23   30), ('c',    name  s-1  s_2
+#2     c   14   25
+#9     c   16   34
+#10    c   10   35), ('d',    name  s-1  s_2
+#3     d   12   26
+#11    d   34   56)]
